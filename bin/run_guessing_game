@@ -1,0 +1,14 @@
+def run_guessing_game
+  computer_number = rand(1..6)
+  puts "Pick a number between 1 and 6"
+  user_number = gets.chomp
+  user_number = user_number.to_i
+  
+  if user_number === "exit"
+    return "Goodbye!"
+  elsif user_number === computer_number
+    return "You guessed the correct number!"
+  else
+    return "Sorry! The computer guessed #{computer_number}"
+  end
+end
